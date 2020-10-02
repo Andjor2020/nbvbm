@@ -16,14 +16,14 @@ title: Home
     </div>
     {% endif %}
 
-   {% if site.data.settings.featured-img.active %}
+    {% if site.data.settings.featured-img.active %}
     <div class = "featured-img-container">
-        {% if post.image %}
+    {% if post.image %}
         <a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}"/></a>
-        {% endif %}
-        {% if post.video %}
-            <a href="{{ post.url | relative_url }}">{% include gif.html filename = post.video %}</a>
-        {% endif %}
+    {% endif %}
+    {% if post.gif %}
+        <a href="{{ post.url | relative_url }}">{% include gif.html file = post.gif %}</a>
+    {% endif %}
     </div>
     {% endif %}
 
